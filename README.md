@@ -4,6 +4,11 @@ A user-mode driver that brings the original **Logitech WingMan Force** USB joyst
 (model **J-UA9**, USB ID `046D:C281`) back to life on 64-bit Windows 10 and 11 -
 including **force feedback** for Microsoft Flight Simulator 2020.
 
+![Logitech WingMan Force J-UA9](docs/wingman-force-j-ua9.jpg)
+
+*The Logitech WingMan Force (J-UA9): cable-driven force feedback, throttle lever on the base,
+9 buttons and a hat switch. It needs its external power adapter for force feedback.*
+
 > This is **not** for the WingMan Force 3D or WingMan Strike Force 3D (those are standard
 > HID devices and still work with Logitech's later drivers).
 
