@@ -9,6 +9,25 @@ including **force feedback** for Microsoft Flight Simulator 2020.
 *The Logitech WingMan Force (J-UA9): cable-driven force feedback, throttle lever on the base,
 9 buttons and a hat switch. It needs its external power adapter for force feedback.*
 
+## ⬇ Download and install (the easy way)
+
+1. **[Download WingManForce-Setup.exe](https://github.com/accabgd/wingman-force-win10/releases/latest)** -
+   on that page, click **WingManForce-Setup-1.0.0.exe** under *Assets*.
+2. **Double-click** the downloaded file. Windows may say *"Windows protected your PC"* because the
+   installer is not code-signed: click **More info → Run anyway**. Confirm the admin prompt.
+3. Click **Next** through the setup. It installs the driver and the vJoy virtual joystick, and
+   creates a **WingMan Force** icon on your desktop. No Python needed.
+4. At the end, **Device Manager opens**: follow the short instructions shown by the setup to give
+   the stick the *WinUSB* driver (once, about one minute; also in the Start menu under *WingMan Force*).
+5. Plug in the stick's **power adapter**, double-click the **WingMan Force** desktop icon and keep its
+   window open while you play.
+6. In Microsoft Flight Simulator choose the joystick **"WingMan Force J-UA9"** and bind
+   *Ailerons (Axis)* to X, *Elevator (Axis)* to Y, throttle to Z. **Don't run XPForce** at the same time.
+
+For MSFS force feedback the program needs `SimConnect.dll` (see *SimConnect.dll* below).
+
+---
+
 > This is **not** for the WingMan Force 3D or WingMan Strike Force 3D (those are standard
 > HID devices and still work with Logitech's later drivers).
 
@@ -53,7 +72,7 @@ driver, and vJoy is a signed virtual-joystick driver.
 - For MSFS force feedback: **`SimConnect.dll`** from the MSFS SDK (not redistributed here, see below)
 - The WingMan Force **power adapter** for force feedback
 
-## Installation
+## Manual installation (from source, for developers)
 
 ### 1. Give the stick the WinUSB driver
 1. Plug in the stick. Open **Device Manager** (`Win+R` → `devmgmt.msc`).
@@ -134,8 +153,13 @@ taken from the behaviour of Logitech's original driver:
   are taken from the world-frame wind, with the steady wind filtered out *before* projecting
   onto the aircraft axes (otherwise turning in a steady wind feels like a gust).
 
+## Building the installer
+`installer\build_installer.bat` (needs Python with PyInstaller and Inno Setup 6) builds
+`build\installer\WingManForce-Setup-<version>.exe`.
+
 ## Uninstall
-Device Manager → right-click the stick → *Uninstall device*; uninstall vJoy via *Settings → Apps*.
+*Settings → Apps* → **WingMan Force (J-UA9) driver** → Uninstall; Device Manager → right-click the
+stick → *Uninstall device*; uninstall vJoy via *Settings → Apps* if you no longer need it.
 
 ## Credits and licences
 - This project: MIT licence (see `LICENSE`).

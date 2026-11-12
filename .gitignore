@@ -4,3 +4,4 @@ __pycache__/
 *.log
 SimConnect.dll
 probe_log.txt
+build/

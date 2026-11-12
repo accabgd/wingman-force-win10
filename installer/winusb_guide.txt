@@ -1,0 +1,37 @@
+ONE MORE STEP: tell Windows to use the "WinUSB" driver for your joystick
+=======================================================================
+
+You only have to do this once. It takes about one minute.
+
+1. Plug in the WingMan Force (and its power adapter).
+
+2. Device Manager opens when you finish this setup.
+   (Or press the Windows key + R, type   devmgmt.msc   and press Enter.)
+
+3. Look for "Other devices" and click the small arrow next to it.
+   You will see "Wingman Force" with a yellow warning triangle.
+
+4. Right-click "Wingman Force" and choose "Update driver".
+
+5. Click "Browse my computer for drivers".
+
+6. Click "Let me pick from a list of available drivers on my computer".
+
+7. Scroll down, click "Universal Serial Bus devices", then click "Next".
+
+8. On the left (Manufacturer) click "WinUsb Device".
+   On the right (Model) click "WinUsb Device". Click "Next".
+
+9. If Windows warns that the driver may not be compatible, click "Yes".
+
+Done! "Wingman Force" now appears under "Universal Serial Bus devices".
+
+Now double-click the "WingMan Force" icon on your desktop and keep its window
+open while you play. In Microsoft Flight Simulator, choose the joystick called
+"WingMan Force J-UA9" and bind:
+   Ailerons (Axis)  ->  Joystick X axis
+   Elevator (Axis)  ->  Joystick Y axis
+   Throttle         ->  Joystick Z axis
+Do NOT start XPForce at the same time.
+
+To undo: in Device Manager right-click the stick and choose "Uninstall device".

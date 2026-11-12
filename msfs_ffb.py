@@ -19,12 +19,15 @@ import ctypes
 import math
 import os
 import random
+import sys
 import threading
 import time
 from ctypes import wintypes as wt
 
 # Where to look for SimConnect.dll (Microsoft MSFS SDK; not redistributed here).
 SIMCONNECT_PATHS = [
+    os.path.join(os.path.dirname(os.path.abspath(sys.executable if getattr(sys, "frozen", False) else __file__)),
+                 "SimConnect.dll"),
     os.path.join(os.path.dirname(os.path.abspath(__file__)), "SimConnect.dll"),
     r"C:\MSFS SDK\SimConnect SDK\lib\SimConnect.dll",
     r"C:\MSFS 2024 SDK\SimConnect SDK\lib\SimConnect.dll",
